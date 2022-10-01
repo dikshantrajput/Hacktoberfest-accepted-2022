@@ -1,10 +1,10 @@
 # <center> HacktoberFest Accepted 2022</center>
 
 <p align="center">
-   <img alt="GitHub pull-requests" src="https://img.shields.io/github/issues-pr/maheshjainckd/Hacktoberfest2022-for-everyone">
-   <img alt="GitHub forks" src="https://img.shields.io/github/forks/maheshjainckd/Hacktoberfest2022-for-everyone">
-   <img alt="contributors" src="https://img.shields.io/github/contributors/maheshjainckd/Hacktoberfest2022-for-everyone">
-   <img alt="GitHub stars" src="https://img.shields.io/github/stars/maheshjainckd/Hacktoberfest2022-for-everyone">
+   <img alt="GitHub pull-requests" src="https://img.shields.io/github/issues-pr/Hacktoberfest-accepted-2022">
+   <img alt="GitHub forks" src="https://img.shields.io/github/forks/maheshjainckd/Hacktoberfest-accepted-2022">
+   <img alt="contributors" src="https://img.shields.io/github/contributors/maheshjainckd/Hacktoberfest-accepted-2022">
+   <img alt="GitHub stars" src="https://img.shields.io/github/stars/maheshjainckd/Hacktoberfest-accepted-2022">
 </p>
 
 # Upload Projects or Different Types of Programs in any Language
@@ -26,8 +26,6 @@ Hacktoberfest is a program by Digital Ocean, DEV and Github, where you can easil
 Add any of your simple or complex Project/Program in any language you like in this repository by clicking "Add File -> Create new File".
 
 ### 3. Mention your name in the contributors.html file
-
-https://github.com/maheshjainckd/Hacktoberfest2022-for-everyone/blob/main/contributors.html
 
 ### 4. Create Pull Request:
 

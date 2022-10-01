@@ -1,4 +1,12 @@
-# <center> HacktoberFest Accepted 2022</center>
+<h1 align="center"> <img src= "https://octodex.github.com/images/original.png" width= "40" /> HacktoberFest Accepted 2022 <img src= "https://octodex.github.com/images/original.png" width= "40" /> </h1>
+
+
+
+
+<div align="center">
+<img src= "https://external-preview.redd.it/d_6uprRJpBPS9-1ExJsjCWbbrQrHg8V1DxvTmCsSpH0.jpg?width=640&crop=smart&auto=webp&s=c86d4993194a52f9b1e39ccd6a929d532f380bf7" width= "400"/>
+</div>
+<br>
 
 <p align="center">
    <img alt="GitHub pull-requests" src="https://img.shields.io/github/issues-pr/dikshantrajput/Hacktoberfest-accepted-2022">
@@ -25,13 +33,11 @@ Hacktoberfest is a program by Digital Ocean, DEV and Github, where you can easil
 
 Add any of your simple or complex Project/Program in any language you like in this repository by clicking "Add File -> Create new File".
 
-### 3. Mention your name in the contributors.html file
-
-### 4. Create Pull Request:
+### 3. Create Pull Request:
 
 Once you have completed these steps, you are ready to start contributing by clicking on Create Pull Request.
 
-### 5. Give this Project a Star:
+### 4. Give this Project a Star:
 
 If you liked working on this project, please share this project as much as you can and star this project to help as many people in opensource as you can.
 
@@ -48,3 +54,10 @@ If you liked working on this project, please share this project as much as you c
 ## Follow me on twitter:
 
 * [dikshantrajput](https://twitter.com/Dikshantrajpu20)
+
+## Our valuable Contributors👩‍💻👨‍💻 :
+
+<a href="https://github.com/maheshjainckd/Hacktoberfest2022-for-everyone/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=dikshantrajput/Hacktoberfest-accepted-2022" />
+</a>
+

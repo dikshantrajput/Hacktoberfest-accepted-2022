@@ -1,10 +1,10 @@
 # <center> HacktoberFest Accepted 2022</center>
 
 <p align="center">
-   <img alt="GitHub pull-requests" src="https://img.shields.io/github/issues-pr/Hacktoberfest-accepted-2022">
-   <img alt="GitHub forks" src="https://img.shields.io/github/forks/maheshjainckd/Hacktoberfest-accepted-2022">
-   <img alt="contributors" src="https://img.shields.io/github/contributors/maheshjainckd/Hacktoberfest-accepted-2022">
-   <img alt="GitHub stars" src="https://img.shields.io/github/stars/maheshjainckd/Hacktoberfest-accepted-2022">
+   <img alt="GitHub pull-requests" src="https://img.shields.io/github/issues-pr/dikshantrajput/Hacktoberfest-accepted-2022">
+   <img alt="GitHub forks" src="https://img.shields.io/github/forks/dikshantrajput/Hacktoberfest-accepted-2022">
+   <img alt="contributors" src="https://img.shields.io/github/contributors/dikshantrajput/Hacktoberfest-accepted-2022">
+   <img alt="GitHub stars" src="https://img.shields.io/github/stars/dikshantrajput/Hacktoberfest-accepted-2022">
 </p>
 
 # Upload Projects or Different Types of Programs in any Language

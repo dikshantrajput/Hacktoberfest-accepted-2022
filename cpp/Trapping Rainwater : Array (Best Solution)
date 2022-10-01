@@ -1,0 +1,79 @@
+Trappin Rainwater Problem : Using O(n) time and 0(1) space
+ 
+ Problem Level : Leetcode Hard & GeeksforGeeks Medium
+ 
+ Problem statement : Find how much water can be trapped between the bar heights . 
+ 
+ Example : height = [0,1,0,2,1,0,1,3,2,1,2,1] ;
+ Output expected : 6
+ 
+ 
+ Time complexity : 0(n) 
+ Space complexity : 0(1) 
+  
+
+ Code : 
+ 
+ #include<bits/stdc++.h>
+ 
+ using namespace std;
+ 
+ long long trappingWater(int arr[], int n){
+       
+       int start =0;
+       int end = n-1;
+       int f_max = arr[0];
+       int l_max= arr[n-1];
+       long long res =0;
+       
+       while(start < end){
+           
+                         
+           if(f_max < l_max){
+              
+               res += f_max - arr[start];
+               start++;
+                f_max = max(f_max , arr[start]);
+           }
+           
+           else {
+
+               res += l_max - arr[end];
+               end--;
+                 l_max = max(l_max , arr[end]);
+           }
+       }
+       return res;
+       
+    }
+    
+    int main(){
+    vector<int> arr;
+    for(int i=0;i<n;i++)
+    cin>>v[i];
+    
+    int n = arr.size();
+    trappingWater(arr,n);
+    }
+
+ Explanation :
+ 
+ Take the l and r pointers. Set l to 0 as the starting index and r to N-1 as the last index.
+Because l is the first element, left max and right max for r are both 0.
+Iterate through the array while l r. There are two possible outcomes.
+
+    Condition1 : left_max <= right max:
+    
+          Consider Element at index l
+          Since we have traversed all elements to the left of l, left_max is known 
+          For the right max of l, We can say that the right max would  always be >= current r_max here
+          So, min(left_max,right_max) would always equal to left_max in this case
+          Increment l.
+    
+    Condition2 : left_max > right max
+  
+          Consider Element at index r
+          Since we have traversed all elements to the right of r, right_max is known
+          For the left max of l, We can say that the left max would  always be >= current l_max here
+          So, min(left_max,right_max) would always equal to right_max in this case
+          Decrement r.

@@ -12,12 +12,12 @@
   
   <div class="container">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" placeholder="Enter Username" name="uname" id="NAME" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" id="PASS" name="psw" required>
         
-    <button type="submit">LOG IN</button>
+    <button type="submit" onclick="validate()">LOG IN</button>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me
     </label>
@@ -28,5 +28,19 @@
   </div>
 </form>
 
+  <script>
+    function validate()
+    {
+    const name=document.getElementById("NAME").value;
+      const pass=document.getElementById("PASS").value;
+      if(name=="" || pass=="")
+      {
+        alert("All inputs are mandatory");
+        return;
+      }
+    
+    }
+  
+  </script>
 </body>
 </html>

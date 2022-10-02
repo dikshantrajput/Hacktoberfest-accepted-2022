@@ -48,10 +48,13 @@ void c_p_c()
 #endif
 }
 
+//Top down approach using recursion
 int profit_top(int prices[], int n, int dp1[]) {
 	if (n <= 0) return 0;
 	int maxi = INT_MIN;
+	//If the solution is already calculated then return
 	if (dp1[n] != 0) return dp1[n];
+	//Cutting the rod at different positions and calculating the profit
 	fo(0, n) {
 		int cut = i + 1;
 		maxi = max(maxi, profit_top(prices, n - cut, dp1) + prices[i]);
@@ -61,7 +64,7 @@ int profit_top(int prices[], int n, int dp1[]) {
 }
 
 int profit_b(int prices[], int n, int dp[]) {
-
+	//Bottom up approach using memoization
 	fo(1, n + 1) {
 		int maxi = INT_MIN;
 		for (int j = 1; j <= i; j++) {
@@ -76,10 +79,13 @@ int32_t main()
 {
 	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 	c_p_c();
+	//The rod of length n is given and we have to cut it into pieces such that the profit is maximum
 	int prices[] = {1, 5, 8, 9, 10, 17, 17, 20};
 	int n = sizeof(prices) / sizeof(int);
+	//Initialize the dp array
 	int dp1[n + 1] = {0};
 	int dp2[n + 1] = {0};
+	//Solution using both top-down and bottom-up approaches
 	cout << profit_top(prices, n, dp1) << " Top Down\n";
 	cout << profit_b(prices, n, dp2) << " Bottom up\n";
 	return 0;

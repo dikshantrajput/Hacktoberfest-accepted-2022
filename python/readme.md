@@ -11,4 +11,4 @@
 - **quick_sort.py** - Quick sort algorithm.
 - **selection_sort.py** - Selection sort algorithm.
 - **radix_sort.py** - radix sort algorithm.
-- **Live Weather Updates.py - This program will give you live weather updates in your city
+- Live Weather Updates.py - This program will give you live weather updates in your city

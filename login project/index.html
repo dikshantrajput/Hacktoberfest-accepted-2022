@@ -1,32 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" >
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Login form with JavaScript Validation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
+<!-- partial:index.partial.html -->
+<div class="logo text-center">
+  <h1>Logo</h1>
+</div>
+<div class="wrapper">
+  <div class="inner-warpper text-center">
+    <h2 class="title">Login to your account</h2>
+    <form action="" id="formvalidate">
+      <div class="input-group">
+        <label class="palceholder" for="userName">User Name</label>
+        <input class="form-control" name="userName" id="userName" type="text" placeholder="" />
+        <span class="lighting"></span>
+      </div>
+      <div class="input-group">
+        <label class="palceholder" for="userPassword">Password</label>
+        <input class="form-control" name="userPassword" id="userPassword" type="password" placeholder="" />
+        <span class="lighting"></span>
+      </div>
 
-<h2>Login Form</h2>
-
-<form action="#" method="post">
-  
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-        
-    <button type="submit">LOG IN</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
+      <button type="submit" id="login">Login</button>
+      <div class="clearfix supporter">
+        <div class="pull-left remember-me">
+          <input id="rememberMe" type="checkbox">
+          <label for="rememberMe">Remember Me</label>
+        </div>
+        <a class="forgot pull-right" href="#">Forgot Password?</a>
+      </div>
+    </form>
   </div>
-
-  <div class="container" style="background-color:white">
-    <span class="psw">FORGOT <a href="#">PASSWORD</a></span>
+  <div class="signup-wrapper text-center">
+    <a href="#">Don't have an accout? <span class="text-primary">Create One</span></a>
   </div>
-</form>
+</div>
+
+<!-- you don't need that :)  -->
+<!-- <div class="direction">
+  Type something in input and click submit to see the effect
+</div> -->
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.min.js'></script><script  src="./script.js"></script>
 
 </body>
 </html>

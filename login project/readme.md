@@ -1,3 +1,3 @@
-# login-form
-created login form using HTML and CSS.
-![image](https://user-images.githubusercontent.com/94219488/193409379-70a8a36e-9dca-461d-9791-486f64b9c7d1.png)
+# Modern Desgin Login Form
+### Designed login form using HTML & CSS
+![Login_Form](https://raw.githubusercontent.com/anshu189/Web-Dev-30/174695ab8cf77cdc6c226c5f0f58c5f0e47e6e26/Calculu(x)/media/Login_Form.png)

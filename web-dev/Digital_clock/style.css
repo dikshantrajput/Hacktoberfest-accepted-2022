@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: #272c33;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+}
+
+#heading{
+    text-align: center;
+    color: aqua;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 68px;
+}
+
+.clock-box{
+    height: 250px;
+    width: 500px;
+    margin: 110px auto;
+    background: #3f4652;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.315);
+    color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dateDay{
+    display: flex;
+    justify-content: space-between;
+    margin: 1px 15px;
+}
+
+#date{
+    margin-top: 7px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#day{
+    margin-top: 7px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#time{
+    margin:  auto;
+    font-size: 62px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h3{
+    text-align: center;
+    
+    color: rgba(0, 255, 255, 0.7);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h3 a{
+    color: aqua;
+}

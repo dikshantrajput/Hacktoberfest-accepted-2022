@@ -11,3 +11,4 @@
 - **quick_sort.py** - Quick sort algorithm.
 - **selection_sort.py** - Selection sort algorithm.
 - **radix_sort.py** - radix sort algorithm.
+- **insertion_sort.py** - insertion sort algorithm.

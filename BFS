@@ -1,0 +1,69 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+const int MOD = 1e9 + 7;
+const int N = 100;
+
+int n, e;
+vector<int> graph[N];
+
+void BFS(int s, int e) {
+	vector<bool> visited(N, false);
+	queue<int> q;
+
+	visited[s] = true;
+	vector<int> prev(N);
+	q.emplace(s);
+	// Do a BFS starting at node s
+	while (q.empty() == false) {
+		int node = q.front();
+		q.pop();
+		vector<int> neighbours = graph[node];
+		// for (int i : neighbours) cout << visited[i] << ' ';
+
+		for (int next : neighbours) {
+			if (visited[next] == false) {
+				q.emplace(next); 
+				visited[next] = true;
+				prev[next] = node;		
+			}
+		} 
+	}
+
+	// Reconstruct path from s -> e
+	vector<int> path;
+	for (int at = e; at != 0; at = prev[at]) {
+		path.emplace_back(at);
+		if (prev[at] == 0)
+			path.push_back(0);
+	}
+
+	reverse(path.begin(), path.end());
+
+	if (path[0] == s)
+		for (int i = 0; i < path.size(); ++i) 
+			cout << path[i] << ' ';
+}
+
+
+int main() {
+	cin.tie(nullptr) -> sync_with_stdio(false);
+    freopen("in", "r", stdin);
+	
+    cin >> n >> e;
+    for (int i = 0; i < e; ++i) {
+    	int u, v; cin >> u >> v; 
+    	graph[u].emplace_back(v);
+    	graph[v].emplace_back(u);
+    }
+
+    for (int i = 0; i <= n; ++i) {
+    	sort(graph[i].begin(), graph[i].end());
+    }
+
+    BFS(0, n);
+
+	// cout << "\nTime: " << clock() / (double)1000 << " secs"; // CLOCK
+	return 0;
+}

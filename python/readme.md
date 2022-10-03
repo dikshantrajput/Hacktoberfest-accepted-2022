@@ -11,3 +11,4 @@
 - **quick_sort.py** - Quick sort algorithm.
 - **selection_sort.py** - Selection sort algorithm.
 - **radix_sort.py** - radix sort algorithm.
+- **Factorial.py** - Program to find the factorial of a number.

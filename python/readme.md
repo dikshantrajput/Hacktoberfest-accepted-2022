@@ -11,3 +11,4 @@
 - **quick_sort.py** - Quick sort algorithm.
 - **selection_sort.py** - Selection sort algorithm.
 - **radix_sort.py** - radix sort algorithm.
+- **quiz.py** - A program to give quiz.

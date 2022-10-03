@@ -11,4 +11,4 @@
 - **quick_sort.py** - Quick sort algorithm.
 - **selection_sort.py** - Selection sort algorithm.
 - **radix_sort.py** - radix sort algorithm.
-**avengers.py** - A Guess game for guessing avengers name.
+- **avengers.py** - A Guess game for guessing avengers name.

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/regstyle.css">
+    <title>Registration page for RK Massages and Spas</title>
+  </head>
+  <body>
+    <div id="navbar">
+    <ul id="ul1">
+      <li>
+        <a href="../index.html"><img src="../icons/home.png" alt="" class="i1"></a>
+      </li>
+      <li>
+        |
+      </li>
+      <li>
+        <a href="reg.html"> Registration </a>
+      </li>
+      <li>
+        |
+      </li>
+      <li>
+        <a href="login.html"> Login </a>
+      </li>
+      <li>
+        |
+      </li>
+    </ul>
+  </div>
+    <center>
+      <fieldset>
+      <h1>
+        Registration Page for RK Spas and Massages
+      </h1>
+    </fieldset>
+      <br>
+      <img src="../images/spa.jpg" alt="">
+      <br /><br>
+      <fieldset>
+      <h4>
+        Welcome to the Registration Page of RK Spas and Massages. Kindly enter the relevant details to the best of your knowledge.
+      </h4>
+    </fieldset>
+    </div>
+      <br /><br />
+    </center>
+    <form autocomplete="on" method="post" action="../PHP/reg.php">
+      <fieldset>
+        <legend>
+          <B>
+            Personalia
+          </B>
+        </legend>
+        <br><br>
+      <table>
+        <tr>
+          <td>
+        <label for="FName">
+          Enter your First Name
+        </label>
+      </td>
+      <td>
+        <input type="text" id="FName" name="FName" placeholder="John" pattern="[A-Za-Z]" required />
+      </td>
+        </tr>
+        <tr>
+          <td>
+        <label for="MName">
+          Enter your Middle Name:
+        </label>
+      </td>
+      <td>
+        <input type="text" id="MName" name="MName" pattern="[A-Za-z]"/>
+      </td>
+      </tr>
+        <tr>
+          <td>
+        <label for="LName">
+          Enter your Last Name: 
+        </label>
+      </td>
+      <td>
+        <input type="text" id="LName" name="LName" placeholder="Doe"/>
+      </td>
+      </tr>
+      <tr>
+        <td>
+          <label for="Password"> Enter your Password: </label>
+        </td>
+        <td>
+          <input type="password" id="password" name="password" minlength="8" placeholder="12345678" required/>
+        </td>
+      </tr>
+      </table>
+        <br />
+      </fieldset>
+      <br><br>
+      <fieldset>
+        <legend>
+          <B>
+            Basic Info
+          </B>
+        </legend>
+        <table>
+          <tr>
+            <td>
+        <label for="contactno">
+          Please Enter your contact number:
+        </label>
+      </td>
+      <td>
+        <select name="contactno">
+          <option value="91">+91</option>
+          <option value="91">+11</option>
+          <option value="91">+31</option>
+          <option value="91">+71</option>
+        </select>
+        <input type="text" id="contactno" name="contactno" placeholder="1234567890" required>
+      </td>
+      </tr>
+        <tr>
+          <td>
+        <label for="acontactno">
+          Please Enter an alternate contact number:
+        </label>
+      </td>
+      <td>
+        <select name="acontactno">
+          <option value="91">+91</option>
+          <option value="91">+11</option>
+          <option value="91">+31</option>
+          <option value="91">+71</option>
+        </select>
+        <input type="text" id="acontactno" name="acontactno" placeholder="1234567890 (Optional)">
+      </td>
+      </tr>
+        <tr>
+          <td>
+        <label for="Age">
+          Please Enter your age: 
+        </label>
+      </td>
+      <td>
+        <input type="text" id="Age" name="Age" placeholder="18" required>
+      </td>
+      </tr>
+        <tr>
+          <td>
+        <label for="Email">
+          Please Enter your E-Mail ID: 
+        </label>
+      </td>
+      <td>
+        <input type="email" id="Email" name="Email" placeholder="abc@abc.com" required>
+      </td>
+      </tr>
+      <tr>
+        <td>
+      <label for="bdate">
+        Please Enter your Birth Date: 
+      </label>
+    </td>
+    <td>
+      <input type="date" id="bdate" name="bdate" required>
+    </td>
+    </tr>
+        <tr>
+          <td>
+        <label for="Sex">
+          Please Enter your Gender:
+        </label>
+        </td>
+        <td>
+          <label > 
+          <input type="radio" id="Sex1" name="Sex" value="Male">
+            Male
+          </input>
+        <input type="radio" id="Sex2" name="Sex" value="Female" >
+        Female
+      </input>
+        <input type="radio" id="Sex3" name="Sex" value="Other" >
+        Other
+      </input>
+    </label>
+    </td>
+    </tr>
+    </label>
+        <br><br>
+        <tr>
+          <td>
+        <label for="Address" >
+          Please Enter your Address:
+        </label>
+      </td>
+      <td>
+        <div id="t1">
+        <table border="2">
+          <tr>
+            <td>
+              <label for="hno" >Enter your House Number: </label>
+            </td>
+            <td>
+              <input type="text" id="hno" name="hno" placeholder="A-1" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="cname" >Enter the name of your Colony/Sector/Street: </label>
+            </td>
+            <td>
+              <input type="text" id="cname" name="cname" placeholder="ABC Colony" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="lname" >Enter the name of your locality: </label>
+            </td>
+            <td>
+              <input type="text" id="lname" name="lname" placeholder="Vishal Khand" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="cityname" >Enter the name of your city: </label>
+            </td>
+            <td>
+              <input type="text" id="cityname" name="cityname" placeholder="Delhi" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="sname" >Enter the name of your State: </label>
+            </td>
+            <td>
+              <input type="text" id="sname" name="sname" placeholder="Delhi" required>
+            </td>
+          </tr>
+        </table>
+    </div>
+      </td>
+      </tr>
+      </table>
+      </fieldset>
+      <br><br>
+      
+      <fieldset>
+        <legend><B>
+          Billing Information and ID
+        </B></legend>
+        <br><br>
+        <table>
+          <tr>
+            <td>
+              <label for="ctype">Select Card Type:</label>
+            </td>
+            <td>
+              <select name="ctype" id="card1" required>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Debit Card">Debit Card</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="cnumber" >Enter Card Number:
+              </label>
+              </td>
+              <td>
+              <input type="text" name="cnumber" id="cnumber1" placeholder="0000-0000-0000-0000" required>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="cardname"  required> Enter the name to which the card is registered: </label>
+            </td>
+            <td>
+              <input type="text" name="cardname" id="cname1" placeholder="Atul Kumar">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="ID" >Enter any valid Government ID Proof:
+              </label>
+            </td>
+            <td>
+              <input type="file" name="ID" id="file1">
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <br><br>
+      <fieldset>
+        <legend><B>
+          Preferences
+        </B></legend>
+        <br><br>
+        <label for="pref1" >
+          Any areas that you feel we should pay special Attention to: 
+        </label>
+        <br>
+        <textarea id="pref1" name="pref1" rows="4" cols="60">
+        </textarea>
+        <br><br>
+        <label for="pref2" >
+          Any history of prior major illnesses: 
+        </label>
+        <br>
+        <textarea id="pref2" name="pref2" rows="4" cols="60">
+        </textarea>
+      </fieldset>
+      <br><br>
+      <fieldset>
+        <legend> <b>
+          Terms and Conditions
+        </b>
+        </legend>
+        <br><br>
+        <input type="radio" name="tac" required>
+        <label for="tac" >I agree to all <b><u><a href="TaC.html">Terms and Conditions</a></b></u>.
+        </label>
+        <br>
+        <input type="radio" for="c" required>
+        <label for="c" >I certify that all given information is correct to the best of my knowledge.
+        </label>
+        <br>
+      </fieldset>
+      <br><br>
+      <center>
+        <input type="Submit" value="Submit">
+        <input type="reset" value="Reset">
+      </center>
+    </form>
+    <div class="CU" id="bottom-footer">
+      <h1 class="contact">Contact Us</h1>
+      <div class="icons">
+        <a href="tel:0123456789"><i class="fa-solid fa-phone"></i></a>
+        <a href="mailto:rishi29kaushal@gmail.com">
+          <i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/7c91c6f599.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.onload = ()=>{
+        alert("Welcome to the registration page")
+      }
+      let myInput = document.getElementById('password');
+      // When the user clicks on the password field, show the message box
+      myInput.onfocus = function () {
+        document.getElementById("message").style.display = "block";
+      };
+
+      // When the user clicks outside of the password field, hide the message box
+      myInput.onblur = function () {
+        document.getElementById("message").style.display = "none";
+      };
+
+      // When the user starts to type something inside the password field
+      myInput.onkeyup = function () {
+        // Validate lowercase letters
+        var lowerCaseLetters = /[a-z]/g;
+        if (myInput.value.match(lowerCaseLetters)) {
+          document.getElementById("message").innerHTML = ""
+        } else {
+          document.getElementById("message").innerHTML = `At least one lowercase letter must be present.<br>`
+        }
+
+        // Validate capital letters
+        var upperCaseLetters = /[A-Z]/g;
+        if (myInput.value.match(upperCaseLetters)) {
+          document.getElementById("message").innerHTML = ""
+        } else {
+          document.getElementById("message").innerHTML += `At least one uppercase letter should be present<br>`;
+        }
+
+        // Validate numbers
+        var numbers = /[0-9]/g;
+        if (myInput.value.match(numbers)) {
+          
+          document.getElementById("message").innerHTML = ""
+        } else {
+          document.getElementById("message").innerHTML += `Atleast one digit should be present.<br>`;
+        }
+
+        // Validate length
+        if (myInput.value.length >= 8) {
+          document.getElementById("message").innerHTML = ""
+        } else {
+          document.getElementById("message").innerHTML += "Password should be atleast 8 chars long."
+        }
+        let submitFunc = (e)=>{
+          e.preventDefault();
+          alert("Form Submitted Successfully");
+        }
+      };
+    </script>
+  </body>
+</html>

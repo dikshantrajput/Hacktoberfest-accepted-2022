@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/plans.css" />
+    <title>Home Page for RK Spas and Massages</title>
+  </head>
+  <body>
+    <div id="navbar">
+      <ul id="ul1">
+        <li>
+          <a href="../index.html"
+            ><img src="icons/home.png" alt="" class="i1"
+          /></a>
+        </li>
+        <li>|</li>
+        <li>
+          <a href="Pages/reg.html"> Registration </a>
+        </li>
+        <li>|</li>
+        <li>
+          <a href="Pages/login.html"> Login </a>
+        </li>
+        <li>|</li>
+      </ul>
+    </div>
+    
+
+    
+    <div class="CU" id="bottom-footer">
+      <h1 class="contact">Contact Us</h1>
+      <div class="icons">
+        <a href="tel:0123456789"><i class="fa-solid fa-phone"></i></a>
+        <a href="mailto:rishi29kaushal@gmail.com">
+          <i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/7c91c6f599.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      window.onload = ()=>{
+        alert("Welcome to the login page")
+      }
+      let myInput = document.getElementById('password');
+      // When the user clicks on the password field, show the message box
+      myInput.onfocus = function () {
+        document.getElementById("message").style.display = "block";
+      };
+
+      // When the user clicks outside of the password field, hide the message box
+      myInput.onblur = function () {
+        document.getElementById("message").style.display = "none";
+      };
+
+      // When the user starts to type something inside the password field
+      myInput.onkeyup = function () {
+        // Validate lowercase letters
+        var lowerCaseLetters = /[a-z]/g;
+        if (myInput.value.match(lowerCaseLetters)) {
+          document.getElementById("message").innerHTML = ""
+        } else {
+          document.getElementById("message").innerHTML = `At least one lowercase letter must be present.<br>`
+        }
+
+        // Validate capital letters
+        var upperCaseLetters = /[A-Z]/g;
+        if (myInput.value.match(upperCaseLetters)) {
+          document.getElementById("message").innerHTML = ""
+        } else {
+          document.getElementById("message").innerHTML += `At least one uppercase letter should be present<br>`;
+        }
+
+        // Validate numbers
+        var numbers = /[0-9]/g;
+        if (myInput.value.match(numbers)) {
+          
+          document.getElementById("message").innerHTML = ""
+        } else {
+          document.getElementById("message").innerHTML += `Atleast one digit should be present.<br>`;
+        }
+
+        // Validate length
+        if (myInput.value.length >= 8) {
+          document.getElementById("message").innerHTML = ""
+        } else {
+          document.getElementById("message").innerHTML += "Password should be atleast 8 chars long."
+        }
+        let submitFunc = (e)=>{
+          e.preventDefault();
+          alert("Form Submitted Successfully");
+        }
+      };
+    </script>
+  </body>
+</html>

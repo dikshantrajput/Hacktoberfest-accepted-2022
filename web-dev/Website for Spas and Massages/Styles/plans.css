@@ -1,0 +1,166 @@
+html{
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+    margin:0 0 100px;
+    padding:0;
+    background-image: url('../images/5.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #ffffff95;
+    background-size: 100% 100%;
+}
+
+#bottom-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
+
+fieldset{
+    padding:15px;
+    margin:10px;
+    background-color: #ffffff95;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    border-color:rgb(15, 88, 19);
+    border-radius: 30px;
+}
+
+#navbar
+{
+    width:100%;
+    background-color: rgb(153, 153, 153);
+}
+
+#t1
+{
+    border-color:rgb(15, 88, 19);
+    border-style:solid;
+}
+
+.CU
+{
+    width:100%;
+    color:rgb(15, 88, 19);
+    height:10%;
+}
+
+ul{
+    list-style:none;  
+    margin:0;
+    display:flex;
+    align-items: center;
+}
+
+li
+{
+    display:inline; 
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.i1
+{
+    width:20px;
+    height:20px;   
+}
+
+legend
+{
+    color:rgb(15, 88, 19); 
+    float:left;
+    font-size:1.5rem;
+}
+
+h1{
+    font-size:4rem;
+    text-align:center;
+}
+
+h1,h4{
+    color:rgb(15, 88, 19);
+}
+
+table{
+    padding:0%; 
+    margin:0%;
+}
+
+label{
+    color:rgb(15, 88, 19);
+}
+
+img
+{
+    width:500px;
+    height:300px; 
+    opacity:0.95;
+    border-width: 5px;
+    border-style: solid;
+    border-color:rgb(15, 88, 19);
+}
+
+input[type=submit]{
+    font-size:1.5rem;
+    margin:15px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    background-color:rgb(15, 88, 19);
+    color: white;
+    transition: .5s ease;
+}
+
+input[type=submit]:hover{
+    color:rgb(15, 88, 19);
+    background-color: white;
+}
+
+input[type=reset]{
+    font-size:1.5rem;
+    margin:15px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 30px;
+    background-color:rgb(15, 88, 19);
+    color: white;
+    transition: .5s ease;
+}
+
+input[type=reset]:hover
+{
+    color:rgb(15, 88, 19);
+    background-color: white;
+}
+.CU{
+    background-color: rgb(153, 153, 153);
+}
+.contact{
+    font-size:1.5rem;
+    /* height: 100%; */
+    /* background-color: black; */
+}
+i{
+    font-size:1.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+}
+
+

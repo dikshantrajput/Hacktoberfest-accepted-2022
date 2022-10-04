@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analog Clock</title>
+    <style>
+      *,
+      *:before,
+      *:after {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #091921;
+        transition: 0.3s;
+        position: relative;
+      }
+      body.active {
+        background-color: #f8f8f8;
+      }
+      #toggle {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        width: 70px;
+        height: 32px;
+        border-radius: 32px;
+        background-color: #222;
+        transition: 0.3s;
+        box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+          inset 0 8px 8px rgba(0, 0, 0, 0.1),
+          inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+      }
+      #toggle .indicator {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(to bottom, #444, #222);
+        border-radius: 50%;
+        transform: scale(0.9);
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+          inset 0 4px 4px rgba(255 255 255 0.2),
+          inset 0 -4px 4px rgba(55 255 255 0.2);
+        transition: 0.3s;
+      }
+      #toggle.active .indicator {
+        left: 39px;
+      }
+      #toggle.active {
+        background: #fff;
+        box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+          inset 0 2px 8px rgba(0, 0, 0, 0.1),
+          inset 0 4px -4px rgba(0, 0, 0, 0.05);
+      }
+      .clock {
+        width: 400px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(clock.png);
+        background-size: cover;
+        border: 4px solid #091921;
+        border-radius: 50%;
+        box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+          inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+          0 15px 15px rgba(0, 0, 0, 0.3), inset 0 15px 15px rgba(0, 0, 0, 0.3);
+      }
+      .clock.active {
+        box-shadow: 0 -15px 15px rgba(93, 77, 77, 0.05),
+          inset 0 -15px 15px rgba(177, 167, 167, 0.05),
+          0 15px 15px rgba(111, 101, 101, 0.3);
+        /* inset 0 15px 15px rgba(142, 130, 130, 0.3); */
+      }
+      .clock::before {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-color: #fff;
+        border-radius: 50%;
+        z-index: 1000;
+      }
+      .clock .hour,
+      .clock .min,
+      .clock .sec {
+        position: absolute;
+      }
+      .clock .hour,
+      .hr {
+        width: 160px;
+        height: 160px;
+      }
+      .clock .min,
+      .mn {
+        width: 190px;
+        height: 190px;
+      }
+      .clock .sec,
+      .sc {
+        width: 230px;
+        height: 230px;
+      }
+      .hr,
+      .mn,
+      .sc {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        position: absolute;
+        border-radius: 50%;
+      }
+      .hr:before {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 80px;
+        background: #ff105e;
+        z-index: 10;
+        border-radius: 6px 6px 0 0;
+      }
+      .mn:before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 100px;
+        background: #fff;
+        z-index: 11;
+        border-radius: 6px 6px 0 0;
+        transition: 0.3s;
+      }
+      .sc:before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 150px;
+        background: #fff;
+        z-index: 12;
+        border-radius: 6px 6px 0 0;
+        transition: 0.3s;
+      }
+      .mn.active:before,
+      .sc.active:before {
+        background-color: #091921;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="toggle">
+      <i class="indicator"></i>
+    </div>
+    <div class="clock">
+      <div class="hour">
+        <div class="hr" id="hr"></div>
+      </div>
+      <div class="min">
+        <div class="mn" id="mn"></div>
+      </div>
+      <div class="sec">
+        <div class="sc" id="sc"></div>
+      </div>
+    </div>
+
+    <script>
+      const deg = 6;
+      const toggle = document.getElementById(`toggle`);
+      const body = document.querySelector(`body`);
+      const hr = document.querySelector(`#hr`);
+      const mn = document.querySelector(`#mn`);
+      const sc = document.querySelector(`#sc`);
+      const clock = document.querySelector(`.clock`);
+
+      toggle.onclick = function () {
+        toggle.classList.toggle(`active`);
+        body.classList.toggle(`active`);
+        mn.classList.toggle(`active`);
+        sc.classList.toggle(`active`);
+        clock.classList.toggle(`active`);
+      };
+
+      setInterval(() => {
+        let day = new Date();
+        let hh = day.getHours() * 30;
+        let mm = day.getMinutes() * deg;
+        let ss = day.getSeconds() * deg;
+
+        hr.style.transform = `rotateZ(${hh + mm / 12}deg)`;
+        mn.style.transform = `rotateZ(${mm}deg)`;
+        sc.style.transform = `rotateZ(${ss}deg)`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/4900892dea.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="cont1">
+        <div class="con"><b> Tasks <span>List <span></b> </div>
+    </div>
+    <div class="cont2">
+        <div class="p2">
+            <i class="fa-solid fa-circle-plus erg" data-toggle="modal" data-target="#myModal"></i>
+            <b>Add New Task</b>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add Task</h4>
+        </div>
+        <div class="modal-body">
+          <form id="myform">
+            <input type="text" id="gettaskhead" placeholder="add task"> 
+          </form>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="gettask()">submit</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add Task Items</h4>
+        </div>
+        <div class="modal-body">
+          <form id="myform2">
+            <input type="text" placeholder="add task items"> 
+          </form>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="getitems()">submit</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+    <div class="grid-container" id="abc">
+    </div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>

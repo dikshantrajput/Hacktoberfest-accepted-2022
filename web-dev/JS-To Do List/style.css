@@ -1,0 +1,138 @@
+body {
+    background-color: #E7ECEF;
+    font-family: sans-serif;
+}
+
+.cont1 {
+    height: 80px;
+    background-color: white;
+    box-shadow: 2px 2px dimgrey;
+    border-radius: 5px;
+}
+
+span {
+    color: dodgerblue;
+}
+
+.con {
+    padding-left: 100px;
+    padding-top: 10px;
+    font-size: 50px;
+}
+
+.cont2 {
+    width: auto;
+    height: 60px;
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+.p2 {
+    float: right;
+    padding-right: 100px;
+    color: rgb(39, 76, 119);
+}
+
+.erg {
+    font-size: 30px;
+    color: rgb(39, 76, 119);
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.grid-container {
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+    margin-bottom: 30px;
+}
+
+.grid {
+    height: 270px;
+    width: 270px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid #EDEDED;
+    overflow: hidden;
+}
+
+.grid-head {
+    border-radius: 20px 20px 0px 0px;
+    height: 60px;
+    padding-top: 15px;
+    font-size: 30px;
+    text-align: center;
+    color: whitesmoke;
+    background-color: rgb(39, 76, 119);
+    overflow: hidden;
+}
+
+.grid-content {
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.grid-content-items {
+    margin-left: 25px;
+    font-size: 20px;
+    color: slategrey;
+    position: relative;
+    overflow: hidden;
+    align-content: center;
+}
+
+.checkclass{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.labelclass{
+    font-size: 20px;
+    padding-left: 8px;
+}
+
+input[type=checkbox]:checked+label {
+    color: lightgrey;
+    text-decoration: line-through;
+}
+
+@media all and (max-width: 1024px){
+    .p2{
+        float: none;
+        text-align: center;
+        padding-right: 0px;
+    }
+}
+
+@media all and (max-width: 850px){
+    .grid-container{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media all and (max-width: 550px){
+    .p2{
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    .cont2{
+        justify-content: center;
+
+    }
+    .grid-container{
+        grid-template-columns: auto;
+    }
+    .con{
+        font-size: 50px;
+        text-align: center;
+        padding-left: 0px;
+    }
+    .cont1 {
+        height: 70px;
+    }
+}

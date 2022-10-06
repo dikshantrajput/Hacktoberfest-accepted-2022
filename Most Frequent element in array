@@ -1,0 +1,19 @@
+var arr=[5, 'a', 'b', 'c', 1, 7, 'a', 9,'a',5,'c', 9, 3];
+var mostfreq = 1;
+var m = 0;
+var item;
+for (var i=0; i<arr.length; i++)
+{
+        for (var j=i; j<arr.length; j++)
+        {
+                if (arr[i] == arr[j])
+                 m++;
+                if (mostfreq<m)
+                {
+                  mostfreq=m; 
+                  item = arr[i];
+                }
+        }
+        m=0;
+}
+console.log(item+" ( " +mostfreq +" times ) ") ;

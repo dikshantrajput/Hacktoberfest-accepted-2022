@@ -1,0 +1,18 @@
+function removeDuplicates(num) {
+  var x,
+      len=num.length,
+      out=[],
+      obj={};
+ 
+  for (x=0; x<len; x++) {
+    obj[num[x]]=0;
+  }
+  for (x in obj) {
+    out.push(x);
+  }
+  return out;
+}
+var arr = [3, 2, 3, 4, 1, 4, 7, 5, 7, 8, 6];
+result = removeDuplicates(arr);
+console.log(arr);
+console.log(result);

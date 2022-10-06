@@ -1,0 +1,391 @@
+
+------------------------------hacker rank 30 days-------------------
+
+
+//Data Type
+#include <iostream>
+#include <iomanip>
+#include <limits>
+
+using namespace std;
+
+int main() {
+    int i = 4;
+    double d = 4.0;
+    string s = "HackerRank ";
+ 
+    int a;
+    double b;
+    string c;
+
+    cin >> a;
+    cin >> b;
+    getline(cin, c);
+    getline(cin, c);
+
+    cout << (a + i) << endl;
+    cout << setprecision(1) << fixed << (b + d) << endl;
+    cout << (s + c) << endl;
+
+    return 0;
+}
+
+
+--------------------------------------------------------
+
+
+
+//operators 
+
+double tip=(mealcost*tip_percent)/100;
+double tax=(mealcost*tax_percent)/100;
+double totalcost=double (mealcost+tip+tax);
+cout<<round(totalcost);
+---------------------------------------------
+
+
+
+
+
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    
+    if(n%2==1 || (n>5 && n<21))
+    {
+            cout<<"Weird";
+    }
+    else
+    {
+        cout<<"Not Weird";
+    }
+    
+    
+    
+
+    return 0;
+}
+
+
+-------------------------------------------------------
+
+
+using namespace std;
+#include <iostream>
+
+class Person{
+    public:
+        int age;
+        Person(int initialAge);
+        void amIOld();
+        void yearPasses();
+    };
+
+    Person::Person(int initialAge)
+    {
+        // Add some more code to run some checks on initialAge
+        if(initialAge<0)
+        {
+            age=0;
+            cout<<"Age is not valid, setting age to 0.\n";
+        }
+        else
+            age=initialAge;
+
+    }
+
+    void Person::amIOld()
+    {
+        // Do some computations in here and print out the correct statement to the console 
+        if(age<13)
+            cout<<"You are young.\n";
+        else if((age>=13)&&(age<18))
+            cout<<"You are a teenager.\n";
+        else
+            cout<<"You are old.\n";
+    }
+
+
+    void Person::yearPasses()
+    {
+        // Increment the age of the person in here
+        age=age+1;
+    }
+
+int main(){
+    int t;
+	int age;
+    cin >> t;
+    for(int i=0; i < t; i++) {
+    	cin >> age;
+        Person p(age);
+        p.amIOld();
+        for(int j=0; j < 3; j++) {
+        	p.yearPasses(); 
+        }
+        p.amIOld();
+      
+		cout << '\n';
+    }
+
+    return 0;
+}
+
+
+
+----------------------------------
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+  
+    
+    for(int i=0;i<n;i++)
+    {
+        string str;
+        cin>>str;
+        
+        for(int j=0;j<str.length();j++)
+        {
+            if(j%2==0)
+            {
+                cout<<str[j];
+            }
+        }
+        
+        cout<<" ";
+        for(int j=0;j<str.length();j++)
+        {
+            if(j%2!=0)
+            {
+                cout<<str[j];
+            }
+        }
+        
+    }
+    cout<<"\n";
+    
+   
+
+    return 0;
+}
+
+
+------------------------------
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   
+   int a[5]={1,4,3,2,8};
+   int temp;
+   
+   for(int i=0;i<5;i++)
+   {
+       for(int j=i+1;j<5;j++)
+       {
+           if(a[i]>a[j])
+           {
+               temp=a[i];
+               a[i]=a[j];
+               a[j]=temp;
+           }
+       }
+       
+       
+   }
+   
+   for(int i=0;i<5;i++)
+   {
+       cout<<a[i];
+   }
+
+    return 0;
+}
+
+
+--------------------------------------
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    
+  
+  
+  int a[n];  
+    
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    
+    
+    for(int i=n-1;i>=0;i--)
+    {
+        cout<<a[i]<<" ";
+    }
+    
+    
+    
+    
+}
+--------------------------------------------
+
+#include<iostream>
+using namespace std;
+
+int factorial(int n)
+{
+    if(n > 1)
+        return n * factorial(n - 1);
+    else
+        return 1;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    
+  
+cout<<factorial(n);
+
+  
+  
+  
+  
+}
+
+
+------------------------------
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <map>
+using namespace std;
+int main()
+{
+    
+    
+    int n;
+string name;
+long num;
+cin >> n;
+cin.ignore();
+map <string, long> pBook;
+for (int i = 0; i < n; i++) {
+    cin >> name;
+    cin >> num;
+    pBook[name] = num;
+}
+while(cin >> name) {
+    if (pBook.find(name) != pBook.end()) {
+        cout << name << "=" << pBook.find(name)->second << endl;
+    } else {
+        cout << "Not found" << endl;
+    }
+}
+  
+  
+}
+
+
+------------------------------
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   
+   int a,b,c=0,max=0;
+   cin>>a;
+   
+   while(a!=0)
+   {
+       b=a%2;
+      if(b==1)
+      {
+          c++;
+          if(c>max)
+          {
+              max=c;
+          }
+      }
+      else{
+          c=0;
+       
+      }
+       a=a/2;
+       
+   }
+   cout<<max;
+
+    return 0;
+}
+-----------------------------------------
+
+
+int max_sum = 0;
+    int temp_sum;
+    for(int i = 0; i < 4; i++) {
+        for(int j = 0; j < 4; j++) {
+            temp_sum = 0;
+            // top row
+            temp_sum += arr[i][j];
+            temp_sum += arr[i][j+1];
+            temp_sum += arr[i][j+2];
+            //middle 
+            temp_sum += arr[i+1][j+1];
+            //bottom row
+            temp_sum += arr[i+2][j];
+            temp_sum += arr[i+2][j+1];
+            temp_sum += arr[i+2][j+2];
+            
+            //if first hourglass, set as max
+            if(temp_sum > max_sum || i == 0 && j == 0)
+                max_sum = temp_sum;
+        }
+    }
+    cout << max_sum;
+
+----------------------------------------------------

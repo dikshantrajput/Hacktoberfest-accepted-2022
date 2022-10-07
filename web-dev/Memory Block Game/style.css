@@ -1,0 +1,21 @@
+.game-container{
+   padding: 50px;
+   border-radius: 20px;
+}
+.off img{
+    animation: fadeOut 2s forwards;
+}
+.on img{
+    animation: fadeIn 2s forwards;
+}
+
+
+@keyframes fadeOut {
+   0% {opacity: 1;display: block;}
+   100% {opacity: 0;display: none;} 
+} 
+
+@keyframes fadeIn {
+   0% {opacity: 0;display: none;}
+   100% {opacity: 1;display: block;} 
+} 

@@ -1,0 +1,33 @@
+body
+{
+  background-color:white;
+  font-family:verdana;
+  font-size:150%;
+  color:#525252;
+   margin-top:50px;
+}
+.townCity p{
+  text-decoration: none;
+  border-bottom: 3px solid #525252
+}
+.weatherContainer
+{
+  border-left: solid #525252 3px;
+   padding: 40px;
+}
+.fontStyle
+{
+  font-family:verdana;
+  font-weight:bold;
+}
+.townCity,
+.weather
+{
+    text-transform:capitalize;
+}
+
+.create
+{
+  font-weight:normal;
+  font-size:50%;
+}

@@ -1,0 +1,24 @@
+function quickSort(arr) {
+  if(arr.length <= 1) {
+    return arr;
+  } else if(arr.length === 2) {
+    if(arr[0] <= arr[1]) {
+      return arr;
+    } else {
+      return [arr[1], arr[0]];
+    }
+  }
+  let pivot = arr[0];
+  let smaller = [];
+  let bigger = [];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] <= pivot) {
+      smaller.push(arr[i]);
+    } else {
+      bigger.push(arr[i]);
+    }
+  }
+  let sortedSmaller = quickSort(smaller);
+  let sortedBigger = quickSort(bigger);
+  return sortedSmaller.concat([pivot]).concat(sortedBigger);
+}

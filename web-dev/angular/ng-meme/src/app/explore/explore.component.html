@@ -1,0 +1,9 @@
+<div class="container mx-auto w-full h-full">
+  <div class="w-full h-full">
+    <ngx-masonry>
+      <div ngxMasonryItem class="masonry-item" *ngFor="let meme of memes">
+        <img [ngSrc]="meme.url" [width]="meme.width" [height]="meme.height" />
+      </div>
+    </ngx-masonry>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+package sample;
+import java.util.*;
+public class hamiltanian {
+	static int n;
+
+	static int G[][];
+	static int x[];
+	static boolean found;
+	public static void main(String[] args) {
+		hamiltanian hamil = new hamiltanian();
+		hamil.getdata();
+		System.out.println("solutio is ");
+		hamil.ham(2);
+		hamil.solution();
+
+	}
+	void solution()
+	{
+	if(found==false)
+		System.out.println("no solution possible");
+		
+	}
+	void getdata()
+	{
+		int i,j;
+		Scanner sc = new Scanner(System.in);
+	System.out.println("enter the number of vtices");
+	n=sc.nextInt();
+	G=new int[n+1][n+1];
+	x=new int[n+1];
+	for(i=1;i<=n;i++)
+		for(j=1;j<=n;j++)
+		{
+			if(i!=j && i<j)
+			{
+				System.out.println("enter the distance between edge "+i+" and "+j);
+				G[i][j]=G[j][i]=sc.nextInt();
+			}
+			if(i==j)
+				G[i][j]=0;
+		}
+	for(i=1;i<=n;i++)
+		x[i]=0;
+	x[1]=1;
+	
+		
+	}
+	 void ham(int k)
+	{
+		while(true)
+		{
+			nextvalue(G,x,n,k);
+			if(x[k]==0)
+				return;
+			if(k==n)
+			{
+				int j;
+				for(j=1;j<=k;j++)
+					System.out.println(x[j]+" ");
+				System.out.println(x[1]);
+				found =true;
+				return;
+			}
+			else
+				ham(k+1);
+		}
+	}
+	void nextvalue(int G[][],int x[],int n,int k)
+	{
+		while(true)
+		{
+			x[k]=(x[k]+1)%(n+1);
+			if(x[k]==0)
+				return;
+			if(G[x[k-1]][x[k]]!=0)
+			{
+				int j;
+				for(j=1;j<k;j++)
+				if(x[j]==x[k])
+					break;
+				if(k==j)
+					if((k<n)||((k==n)&&G[x[n]][x[1]]!=0))
+						return;
+			}		
+		}
+	}
+}

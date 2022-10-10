@@ -1,0 +1,10 @@
+@media(max-width:500px) {
+    #clock-container {
+        height: 60vw;
+        width: 60vw;
+    }
+
+    #brand h3 , .kinj h6{
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,24 @@
+/*
+Written by: Nick Haynes (@UndyingAtom)
+
+Program which when given an array of ints it determines if you can choose a group of some of the ints
+beginning at the start index such that the group sums to the given target with the 
+additional constraint that all 6's must be chosen. 
+
+Input: start index, an array of ints, a target int
+Output: true or false
+
+problem taken from codingbat.com Recursion-2 -> groupSum6
+*/
+public boolean groupSum6(int start, int[] nums, int target) {
+  if (start>=nums.length){
+    return (target == 0);
+  }
+  if (nums[start] == 6){
+    if (groupSum6(start + 1, nums, target - 6)) return true;
+  } else{
+  if (groupSum6(start + 1, nums, target - nums[start])) return true;
+  if (groupSum6(start+1, nums, target)) return true;
+  }
+  return false; 
+}

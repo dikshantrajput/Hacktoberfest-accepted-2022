@@ -1,0 +1,74 @@
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.5.0 <0.9.0;
+// BOTH TOKENS WE MADE FROM THIS CONTRACT ( ERC20 & ERC721 ) 
+contract ERC1155{
+    event TransferSingle(address indexed sender,address indexed from ,address indexed to ,uint id ,uint amount);
+    event TransforBatch(address indexed operator,address indexed from ,address indexed to ,uint[]  ids, uint[]  amounts);
+    event ApproveForAll(address indexed sender,address indexed operator, bool approved);
+    // event URI()
+    mapping(uint=>mapping(address=>uint)) internal _balances;
+    mapping(address=>mapping(address=>bool)) internal _approves;
+    //get balance of account token
+    function balanceOf(address account ,uint id) public view returns(uint){
+        require(account!=address(0),"Account should have address");
+        return _balances[id][account];
+    }
+    //gets the balance of multiple accounts tokens
+    function balanceOfBatch(address[] memory accounts ,uint[] memory ids)public view returns(uint[] memory){
+        uint[] memory _ids= new uint[](accounts.length);
+        for(uint i=0;i<accounts.length;i++){
+          
+          _ids[i]=balanceOf(accounts[i],ids[i]);
+        }
+        return _ids;
+    }
+    // Is check if an address is an operator for other address
+
+    function isApprovedForAll(address account,address operator) public view returns(bool){
+        require(account!=address(0) && operator!=address(0),"Both Address should not be null");
+        return _approves[account][operator];
+    }
+    // it enables or disables to manage all of msg.senderts assets
+    function setApprovalForAll(address operator,bool approved) public {
+        _approves[msg.sender][operator]=approved;
+        emit ApproveForAll(msg.sender,operator,approved);
+    }
+    function safeTransferFrom(address from ,address to, uint id,uint amount) public {
+        require(from==msg.sender || isApprovedForAll(from,msg.sender),"Msg sender is not the owner or approved for all  ");
+        require(to!=address(0),"Should not be empty");
+        _transfer(from,to,id,amount);
+        emit TransferSingle(msg.sender,from,to,id,amount);
+        require(_checkOnERC1155Received(),"Receiver Is Not Implemented");
+
+    }
+
+    function _transfer(address from ,address to, uint id,uint amount) private {
+        uint fromBalance= _balances[id][from];
+        require(fromBalance>=amount,"Insufficient Balance");
+        _balances[id][from]=fromBalance-amount;
+        _balances[id][to]+=amount;
+    }
+
+    function _checkOnERC1155Received() private pure returns(bool) {
+        return true;
+    }
+
+    function safeBatchTransferFrom(address from ,address to, uint[] memory ids,uint[] memory amounts) public {
+        require(from==msg.sender || isApprovedForAll(from,msg.sender),"Msg sender is not the owner or approved for all  ");
+        require(to!=address(0),"Should not be empty");
+        uint len = ids.length;
+        for(uint i=0;i<len;i++){
+            _transfer(from,to,ids[i],amounts[i]);
+        }
+        emit TransforBatch(msg.sender,from,to,ids,amounts);
+    }
+    //ERC165 Compliant We need to tell everyone that we support 1155 
+    //
+    function supportsInterface(bytes4 interfaceId) public pure returns(bool) {
+        // require(interfaceId==0xd9b67a26,"We not support interface id");
+        return interfaceId==0xd9b67a26;
+    }
+
+
+    
+}

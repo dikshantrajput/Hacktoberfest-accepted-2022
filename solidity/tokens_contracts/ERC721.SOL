@@ -1,0 +1,75 @@
+//Making A ERC721 CONTRACT TAKING AN EXAMPLE OF MARIO PNG 
+
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >=0.5.0 <0.9.0;
+
+contract ERC721Mario{
+    event ApprovalForAll(address indexed owner,address indexed _operator,bool approved);
+    event Approval(address indexed owner,address indexed to ,uint tokenId);
+    event Transfer(address indexed from ,address indexed to, uint tokenId);
+    mapping(address=>uint) internal _balances;
+    mapping(uint=>address) internal _owners;
+    mapping(uint=>address) internal _tokenApproved;
+    mapping(address=>mapping(address=>bool)) private _operatorApprovals;
+    function balanceOf() view public returns(uint){
+        return _balances[msg.sender];
+    }
+
+    function ownerOf(uint256 _tokenId) public view returns (address){
+        return _owners[_tokenId];
+    }
+
+    function setApprovalForAll(address operator,bool approved) public {
+        _operatorApprovals[msg.sender][operator]=approved;
+        emit ApprovalForAll(msg.sender,operator,approved);
+        
+    }
+
+    function isApprovalForAll(address owner,address operator) public view returns(bool){
+        return _operatorApprovals[owner][operator];  
+    }
+
+    function approve(address to ,uint tokenId) public {
+        address owner= _owners[tokenId];
+        require(msg.sender==owner || isApprovalForAll(owner,msg.sender),"You Are Not Owner of this NFT ");
+        _tokenApproved[tokenId]=to;
+        emit Approval(owner,to,tokenId);
+
+    }
+
+    function getApproved(uint tokenId) public view returns(address) {
+        address owner= _owners[tokenId];
+        require(owner!=address(0),"Address should not be empty");
+        return _tokenApproved[tokenId];
+    } 
+
+    function transferFrom(address from ,address to ,uint tokenId) public {
+        address owner= _owners[tokenId];
+        require(owner==msg.sender || getApproved(tokenId)==msg.sender || isApprovalForAll(owner,msg.sender) || owner==from || to!=address(0) || _owners[tokenId] != address(0),"You are not the owner");
+        approve(address(0),tokenId);
+        
+        _balances[from]-=1;
+        _balances[to]+=1;
+        _owners[tokenId]=to;
+
+        emit Transfer(from ,to,tokenId);
+    }
+
+    function safeTransferFrom(address from ,address to ,uint tokenId, bytes memory data ) public {
+        transferFrom(from,to,tokenId);
+        require(_checkOnERC721Received(),"Receiver Not Implemented");
+
+    }
+
+    function safeTransferFrom(address from ,address to ,uint tokenId)public {
+        safeTransferFrom(from,to,tokenId,"");
+    }
+
+    function _checkOnERC721Received() private pure  returns(bool){
+        return true;
+    }
+    // For EIP165 
+    function supportInterface(bytes4 interfaceId) public pure virtual returns(bool){
+        return interfaceId== 0x80ac58cd;
+    }
+}

@@ -1,0 +1,110 @@
+body{
+    text-align: center;
+    align-items: center;
+    background: #88c3a2;
+}
+
+.btn{
+    margin-top: 15px;
+    padding: 15px 30px 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #1b56d4;
+    cursor: pointer;
+    font-size: 20px;
+    /* transition-duration: 0.5s; */
+    color: white;
+    margin-left: left 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,1),0 6px 20px 0 rgba(29,29,29,0.5);
+}
+.btn:hover{
+    background:red ;
+}
+input{
+    padding: 15px 40px 15px 40px;
+    border-radius: 40px;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+
+
+}
+.container{
+    width: fit-content;
+     margin: auto;
+    padding: 20px 50px 20px 50px;
+    margin-top: 80px;
+    border-radius: 32px;
+    /* border: 3px solid red;  */
+    background: #88c3a2;
+    box-shadow: 20px 20px 60px #74a68a, -20px -20px 60px #9ce0ba;
+}
+#container{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#container > div{
+width: 150px;
+height: 150px;
+}
+
+.activecase{
+    background-color: #2d6a4f;
+    color: white;
+    margin-top: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0 ,0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+.newcase{
+    background-color:#40916c;
+    color:rgba(0 ,0, 0);
+    margin-top: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0 ,0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-left: 10px;
+}
+
+.recovercase{
+    background-color:#40916c;
+    color:rgba(0 ,0, 0);
+    margin-top: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0 ,0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-left: 10px;
+}
+.Totalcase{
+    background-color:#40916c;
+    color:rgba(0 ,0, 0);
+    margin-top: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0 ,0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  
+}
+
+.totalDeath{
+    background-color:#7ce2af;
+    color:rgba(0 ,0, 0);
+    margin-top: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0 ,0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-left: 10px;
+}
+.totaltest{
+    background-color:#7ce2af;
+    color:rgba(0 ,0, 0);
+    margin-top: 10px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0 ,0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-left: 10px;
+}

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Flask App</title>
+    <style type="text/css">
+        body {
+    background-color: #181818;
+    display: block;
+    justify-content: center;
+}
+
+.card {
+    background-color: #181818;
+    width: 252px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;; */
+}
+
+
+.cards {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(252px, 1fr));
+}
+
+
+.thumbnail img {
+    margin-top: 12px;
+    width: 252px;
+    height: auto;
+}
+
+
+.logo img {
+    border-radius: 50%;
+    width: auto;
+    height: 36px;
+    margin-right: 12px;
+}
+
+.details {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    padding: 0%;
+    margin: 0%;
+}
+
+.title {
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+}
+
+.title p {
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    width: 180px;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0%;
+    height: 36px;
+    margin-bottom: 4px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    line-height: 18px;
+}
+
+span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #AAAA;
+}
+
+.content {
+    display: flex;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 12px;
+
+}
+
+
+        </style>
+</head>
+<body>
+    
+        <div class="cards">
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="thumbnail"><img src="https://i.ytimg.com/vi/lhNNbGuh0t4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9dHsfIyJ5B0v7_aOuqPoiZ7bF3g" alt=""></div>
+                <div class="content">
+                    <div class="logo"><img src="https://yt3.ggpht.com/ytc/AMLnZu8dZQJYCt6Ffcd-pl113huuo_HJ3PpvgkyFk5FkrQ=s48-c-k-c0x00ffffff-no-rj" alt=""></div>
+                    <div class="details">
+                        <div class="title"><p>Every Freelancer should do *these* (Max Earnings)</p></div>
+                        <span>CodeWithHarry</span>
+                        <span>4897 views • 5 days ago</span>
+        
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+/*navbar
+.navbar ul{
+flex-wrap: wrap;
+justify-content:center;
+}
+/*home*/
+.home{ 
+    background-image: url('../images/pic30.png') cover;
+    height:100%;
+    width:100%;
+}
+/*headings*/
+.headings{
+    font-size: 2.5rem;
+    
+}
+
+/*services*/
+.services .row{
+    flex-direction: column;
+    align-items:center;
+
+}
+.services .row .box{
+    width:100%;
+    height:100%;
+}
+/*about*/
+.about .pic{
+    flex-direction:column;
+    align-items:center;
+
+
+}
+
+.about .pic img{
+    width: 100%;
+    height:100%;
+
+}
+
+.about .intro{
+    text-align: center;
+    padding:10px;
+   
+
+}

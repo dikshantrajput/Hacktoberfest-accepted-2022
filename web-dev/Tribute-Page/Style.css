@@ -1,0 +1,295 @@
+/*For All*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*Ends For all*/
+
+/*Header*/
+/*The main topic*/
+#gandalf {
+    padding-top: 300px;
+    padding-bottom: 10px;
+    height: 400px;
+    font-size: 100px;
+    background-image: url(/web-dev/Tribute-Page/Images/Gandalf-feature.jpg);
+    color: azure;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+}
+
+#title {
+    font-size: 60px;
+}
+
+/*End for the main topic*/
+
+/*Navigation*/
+#navigation {
+    background-color: rgb(12, 11, 11);
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+li {
+    float: left;
+    font-size: 30px;
+    text-transform: none;
+}
+
+li a {
+    display: block;
+    padding: 13px;
+    color: aliceblue;
+}
+
+/*Dropdown*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dd-1 {
+    display: none;
+    position: absolute;
+    background-color: rgb(12, 11, 11);
+    width: fit-content;
+}
+
+.dd-1>li {
+    display: block;
+}
+
+.dropdown:hover .dd-1 {
+    display: block;
+}
+
+.dd-2 {
+    display: none;
+    position: absolute;
+    background-color: rgb(12, 11, 11);
+    width: fit-content;
+}
+
+.dd-2>li {
+    display: block;
+}
+
+.dropdown:hover .dd-2 {
+    display: block;
+}
+
+.dd-3 {
+    display: none;
+    position: absolute;
+    background-color: rgb(12, 11, 11);
+    width: fit-content;
+}
+
+.dd-3>li {
+    display: block;
+}
+
+.dropdown:hover .dd-3 {
+    display: block;
+}
+
+
+/*Links*/
+a {
+    text-decoration: none;
+    color: aqua;
+}
+
+a:link {
+    color: aliceblue;
+}
+
+a:hover {
+    background-color: darkslategrey;
+}
+
+a:visited {
+    color: bisque;
+}
+
+a:active {
+    color: burlywood;
+}
+
+/*main*/
+h1 {
+    text-transform: none;
+    background-color: rgb(58, 42, 42);
+    color: white;
+    height: 80px;
+    font-size: 50px;
+}
+
+h2 {
+    text-transform: none;
+    background-color: grey;
+    color: aliceblue;
+    height: 50px;
+    font-size: 25px;
+}
+
+h3 {
+    text-transform: none;
+    background-color: rgb(76, 71, 71);
+    color: aliceblue;
+    height: 25px;
+    font-size: 15px;
+}
+
+body {
+    background-color: rgb(232, 227, 227);
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+    text-align: justify;
+    padding: 10px;
+}
+
+#link-1:link {
+    color: black;
+}
+
+#link-1:hover {
+    color: blue;
+}
+
+#link-1:visited {
+    color: blueviolet;
+}
+
+/*Tables*/
+table,
+th,
+td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+
+#table-1 {
+    border-style: solid;
+    float: right;
+    width: auto;
+}
+
+#table-2 {
+    border-style: solid;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#table-3 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/*paragraph for table-1*/
+#p-1 {
+    padding-left: 10px;
+    text-align: left;
+}
+
+#table-4 {
+    border-style: solid;
+    float: right;
+    width: 140px;
+}
+
+#etymology {
+    height: 350px;
+    text-align: left;
+}
+
+#p-4 {
+    text-align: left;
+    width: 1100px;
+}
+
+#table-5,
+#table-6,
+#table-7,
+#table-8,
+#table-9,
+#table-10 {
+    width: 100px;
+}
+
+/*Boxes*/
+#box-1 {
+    margin-left: 30px;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#box-2 {
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: solid;
+    width: 500px;
+    float: right;
+}
+
+#p-2 {
+    padding-left: 10px;
+    text-align: left;
+}
+
+#box-3 {
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: solid;
+    width: 500px;
+    float: right;
+}
+
+#p-3 {
+    padding: 10px;
+    text-align: left;
+}
+
+#box-4,
+#box-5,
+#box-6 {
+    margin-left: 30px;
+}
+
+#info {
+    text-align: center;
+}
+
+/*Footer*/
+footer {
+    background-color: black;
+    color: aliceblue;
+}
+
+p #foot-link {
+    color: aqua;
+}
+
+p #foot-link:hover {
+    color: rgb(42, 53, 49);
+    background-color: wheat;
+}

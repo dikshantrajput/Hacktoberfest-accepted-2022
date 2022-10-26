@@ -11,7 +11,7 @@ int main()
 {
     struct node *head, *newnode, *temp, *prvnode, *curnode, *nxtnode;
     int choice;
-    head = 0;
+    head = NULL;
 
     do
     {
@@ -19,7 +19,7 @@ int main()
         newnode = (struct node *)malloc(sizeof(struct node));
         printf("Enter data:\n");
         scanf("%d", &newnode->data);
-        newnode->next = 0;
+        newnode->next = NULL;
 
         if (head == 0)
         {

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Defining the components of a node
 struct node
 {
     int data;
@@ -9,6 +10,7 @@ struct node
 
 int main()
 {
+    // Declaring the pointers
     struct node *head, *newnode, *temp, *prvnode, *curnode, *nxtnode;
     int choice;
     head = 0;
